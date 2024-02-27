@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&family=Open+Sans&display=swap');
+
+
+:root{
+    --amarelo-clarinho: #FDF7E4;
+    --amarelo-escurinho: #FAEED1;
+    --amarelo-escuro: #DED0B6;
+    --amarelo-queimado: #BBAB8C;
+    --font-titulo: "Kode Mono", monospace;
+    --font-texto: "Playfair Display", serif;
+
+}
+
+body{
+    background-color: var(--amarelo-clarinho);
+}
