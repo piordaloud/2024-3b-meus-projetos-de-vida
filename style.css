@@ -2,8 +2,8 @@
 
 
 :root{
-    --amarelo-clarinho: #FDF7E4;
-    --amarelo-escurinho: #FAEED1;
+    --amarelo-clarinho: #00e1ff;
+    --amarelo-escurinho: #000000;
     --amarelo-escuro: #DED0B6;
     --amarelo-queimado: #BBAB8C;
     --font-titulo: "Kode Mono", monospace;
@@ -14,14 +14,68 @@
 body{
     background-color: var(--amarelo-clarinho);
     color: var(--amarelo-escurinho);
-    font-family: var(--font-titulo)
+    font-family: var(--font-titulo);
 }
 .conteudo-principal{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    max-width: 120px;
+    max-width: 1200px;
     width: 100%;
     margin: 0 auto;
+}
+.titulo-principal{
+    text-align: left;
+    width: 100%;
+    font-size: 36px;
+}
+
+.titulo-principal span{
+    color: rgb(255, 255, 255);
+}
+
+.botao {
+    font-family: var(--font-texto);
+    font-size: medium;
+    background-color: var(--amarelo-queimado);
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+    width: 100%;
+    border-bottom: 4px solid var(--amarelo-escuro);
+    border-left: 4px solid var(--amarelo-escuro);
+    border-right: 4px solid var(--amarelo-escuro);
+    border-top: none;
+
+}
+.botoes {
+    display: block;
+}
+
+.botao:first-child{
+    border-radius: 40px 40px 0 0;
+}
+
+.botao:last-child{
+    border-radius: 0 0 40px 40px;
+}
+
+.ativo{
+    background-color:var(--amarelo-queimado) ;
+    border-bottom: var(--amarelo-escurinho);
+}
+
+@media  screen and (min-width:768px) {
+    .botoes{
+        display: flex;
+    }
+    .botao:first-child{
+        border-radius: 40px 0 0 0;
+    }
+    .botao:last-child{
+        border-radius: 0 40px 0 0;
+    }
 }
