@@ -2,7 +2,7 @@
 
 
 :root{
-    --amarelo-clarinho: #00e1ff;
+    --amarelo-clarinho: #15ff21;
     --amarelo-escurinho: #000000;
     --amarelo-escuro: #DED0B6;
     --amarelo-queimado: #BBAB8C;
@@ -64,7 +64,7 @@ body{
 }
 
 .ativo{
-    background-color:var(--amarelo-queimado) ;
+    background-color:var(--amarelo-escuro) ;
     border-bottom: var(--amarelo-escurinho);
 }
 
