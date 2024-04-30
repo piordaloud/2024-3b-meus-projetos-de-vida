@@ -3,27 +3,33 @@ const textos = document.querySelectorAll('.abas-conteudo');
 
 const contadores = document.querySelectorAll('.contador');
 
-const tempoObjetivo01 = new Date('2050-11-30T00:00:00');
-const tempoObjetivo02 = new Date('2024-07-10T00:00:00');
-const tempoObjetivo03 = new Date('2024-06-25T00:00:00');
+const tempoObjetivo01 = new Date('2030-11-30T00:00:00');
+const tempoObjetivo02 = new Date('2024-08-10T00:00:00');
+const tempoObjetivo03 = new Date('2024-07-25T00:00:00');
 const tempoObjetivo04 = new Date('2024-12-27T00:00:00');
 
 const tempos = [tempoObjetivo01, tempoObjetivo02, tempoObjetivo03, tempoObjetivo04];
 
 function atualizaCronometro() {
-    for (let = i = 0; i < tempos.length; i++) {
-        contadores[i].textContent = calculaTempo(tempos[i]);
+
+    for (let  i=0; i<contadores.length;i++) {
+        document.getElementById("dias"+i).textContent = calculaTempo(tempos[i])[0];
+        document.getElementById("horas"+i).textContent = calculaTempo(tempos[i])[1];
+        document.getElementById("min"+i).textContent = calculaTempo(tempos[i])[2];
+        document.getElementById("segs"+i).textContent = calculaTempo(tempos[i])[3];
+        //contadores[i].textContent = calculaTempo(tempos[i]);
     }
 }
 
 function comecaCronometro() {
     atualizaCronometro();
-    setinterval(atualizaCronometro, 1000);
+    setInterval(atualizaCronometro, 1000);
 }
 
-//comecaCronometro();
+comecaCronometro();
 
-for (let i = 0; i < botoes.length; i++) {
+
+for (let  i = 0; i < botoes.length; i++) {
     botoes[i].onclick = function () {
 
         for (j = 0; j < botoes.length; j++) {
@@ -35,7 +41,6 @@ for (let i = 0; i < botoes.length; i++) {
         textos[i].classList.add('ativo')
     }
 }
-
 
 function calculaTempo(tempoObjetivo) {
     let tempoAtual = new Date();
@@ -50,9 +55,9 @@ function calculaTempo(tempoObjetivo) {
     segundos %= 60;
     minutos %= 60;
     horas %= 24;
-    if (tempoFinal > 0) {
-        return dias + " Dias " + horas + " Horas " + minutos + " Minutos " + segundos + " Segundos ";
+    if (tempofinal > 0) {
+        return [dias, horas, minutos, segundos];
     } else {
-        return "Prazo finalizado"
+        return [0, 0, 0, 0]
     }
 }
